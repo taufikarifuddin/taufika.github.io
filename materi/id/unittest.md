@@ -100,6 +100,7 @@ diatas sudah terdapat class Utitlity yang memiliki 2 method.
 2. digunakan untuk melakukan penjumlahan terhadap beberapa amount
 
 So mari kita buat unit testnya : 
+
 yang pertama mari kita buat untuk unit test untuk ke 2 method tersebut :
 ```
 public class UtilityTest {
@@ -195,7 +196,7 @@ public class UtilityTest {
     }
 }
 ```
-Jika diperhatikan, tidak ada perubahan pada test sebelumnya. Hanya ada penambahan test untuk case terbaru yaitu ```denullifyAmount_NegativeAmount()```, ```sumAmmount_negativeAmountTest()``` dan ```sumAmmount_NullAndNegativeTest()```. Ketika kita run tersebut dan terdapat error di test sebelumnya, maka perlu ada pengecekan karena terdapat indakasi bahwa perubahan code yang baru tersebut mempengaruhui flow yang sebelumnya.
+Jika diperhatikan, tidak ada perubahan pada test sebelumnya. Hanya ada penambahan test untuk case terbaru yaitu ```denullifyAmount_NegativeAmount()```, ```sumAmmount_negativeAmountTest()``` dan ```sumAmmount_NullAndNegativeTest()```. Ketika kita run tersebut dan terdapat error di test sebelumnya, maka perlu ada pengecekan karena terdapat indikasi bahwa perubahan code yang baru tersebut mempengaruhui flow yang sebelumnya.
 
 ## Kekurangan
 Sebelumnya sudah dijelaskan, apa itu ``Unit Test`` dan pengertiannya. Unit test sendiri adalah salah satu metode yang digunakan melakukan pengetesan di level ``Unit``. Jadi kita tidak perlu memikirkan bagaimana si ``Unit`` ini dipanggil oleh ``Unit`` lain. Sehingga kita tidak dapat memastikan proses integrasi antara class sudah berjalan dengan benar atau tidak. Seperti contohnya case yang sering terjadi adalah parameter yang dikirim  dari ``Unit`` yang akan di test ternyata salah dari sisi ``Unit`` pemanggil. Karena hal tersebut ada beberapa metode lain seperti ``Integration Test`` yang dapat dikombinasikan untuk bisa mengcover hal tersebut.
