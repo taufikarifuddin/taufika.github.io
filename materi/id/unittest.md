@@ -2,18 +2,18 @@
 
 Menurut pengertian yang di kutip dari [wikipedia](https://en.wikipedia.org), [Unit Test](https://en.wikipedia.org/wiki/Unit_testing) merupakan salah satu metode yang digunakan untuk melakukan test pada source code yang telah dibuat. Dari kata-kata penyusun Unit Test sendiri terdiri dari 2 kata, **UNIT** dan **TEST**, tidak lain yang berarti adalah melakukan **TEST** pada sebuah **UNIT**. Jadi dapat disimpulkan, unit test ini hanya melakukan test dalam scope unit, bukan secara flow secara menyeluruh.
 
-# Apa yang akan di bahas ? 
+# Apa yang akan di bahas dalam tulisan ini ? 
 Ada beberapa point yang akan dibahas dalam tulisan ini, diantaranya adalah :
 
 1. [Kenapa dan ada apa dengan unit test ?](#Kenapa-dan-ada-apa-dengan-unit-test)
-2. [Kenapa developer yang melakukannya ?](#Kenapa-developer-yang-melakukannya-)
+2. [Kenapa developer yang melakukannya ?](#Kenapa-developer-yang-melakukannya)
 3. [Seberapakah pentingnya ? ](#Seberapa-pentingnya)
 4. [Bagaimana implementasinya ?](#Bagaimana-implementasinya)
 5. [Kekurangan](#Kekurangan)
 6. [Summary](#Summary)
 
 
-## Kenapa dan ada apa dengan unit test ?
+## Kenapa dan ada apa dengan unit test
 Mungkin beberapa developer bertanya-tanya kenapa harus **Unit Test** atau bahkan tidak tau tentang **Unit Test** itu sendiri. Mari kita bahas apa itu **Unit Test** dan apa issue yang berkaitan dengan Unit Test.
 
 Seperti yang sudah dijelaskan [diatas](#UNIT-TEST), **Unit Test** merupakan salah satu cara yang digunakan untuk melakukan test terhadap code yang telah kita buat, apakah sudah memenuhi ekspektasi dengan apa yang kita inginkan.
@@ -28,14 +28,14 @@ YES, tentu saja hal tersebut akan menghambat proses deveopment **"JIKA tidak dia
 
 Lalu apa yang saya akan dapatkan setelah mengimplementasikan **Unit Test** ? [let's move to another topic](#Seberapa-pentingnya)
 
-## Kenapa developer yang melakukannya ?
+## Kenapa developer yang melakukannya
 Mungkin ini yang salah satu jadi pertanyaan, mengapa Developer yang melakukannya ?  Haruskah developer yang melakukannya ? kenapa bukan QA (Quality Assurance) ?
 
 Menurut pendapat saya pribadi, **YES**. As Developer, kita harus memastikan semua produk yang telah dideliver ke customer harus sudah sesuai dengan requirement yang telah ditetapkan termasuk terdapat case case yang memang harus dihandle. 
 
 Kenapa bukan QA (Quality Assurance) yang melakukan test-test tersebut ? Well, sebenarnya menurut saya pribadi, QA memiliki scope pengetesan yang lebih luas dari developer. So, jika QA harus melakukan test yang seharusnya itu harus harus sesuai dengan requirement, kapan QA akan melakukan test terhadap **"unexpected case"** ??? *hehe :) 
 
-## Seberapa pentingnya ?
+## Seberapa pentingnya
 Seberapa pentingkah **Unit Test** ? Lalu apa yang saya akan dapatkan setelah mengimplementasikan **Unit Test** setelah mengorbankan waktu untuk melakukannya ?
 
 Coba bayangkan, ketika developer membangun sebuah sistem yang memiliki flow approval, dan kita akan melakukan test terhadap report yang di generate ketika flow approval sudah terpenuhi. Bagaimana flow melakukan test secara manual ? Dalam pengalaman saya, tentu saja akan melakukan approval flow dan generate, jika terdapat bug / sesuatu yang tidak sesuai dengan ekspektasi, akan di fix dan akan dicoba ulang, secara flow bisa di gambar sebagai berikut : 
