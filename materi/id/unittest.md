@@ -2,25 +2,31 @@
 
 Menurut pengertian yang di kutip dari [wikipedia](https://en.wikipedia.org), [Unit Test](https://en.wikipedia.org/wiki/Unit_testing) merupakan salah satu metode yang digunakan untuk melakukan test pada source code yang telah dibuat. Dari kata-kata penyusun Unit Test sendiri terdiri dari 2 kata, **UNIT** dan **TEST**, tidak lain yang berarti adalah melakukan **TEST** pada sebuah **UNIT**. Jadi dapat disimpulkan, unit test ini hanya melakukan test dalam scope unit, bukan secara flow secara menyeluruh.
 
-# Apa yang akan di bahas dalam tulisan ini ? 
+# Apa yang akan di bahas ? 
 Ada beberapa point yang akan dibahas dalam tulisan ini, diantaranya adalah :
 
-1. [Kenapa dan ada apa dengan unit test ?](#Kenapa-dan-ada-apa-dengan-unit-test)
-2. [Kenapa developer yang melakukannya ?](#Kenapa-developer-yang-melakukannya)
-3. [Seberapakah pentingnya ? ](#Seberapa-pentingnya)
-4. [Bagaimana implementasinya ?](#Bagaimana-implementasinya)
-5. [Kekurangan](#Kekurangan)
-6. [Summary](#Summary)
+1. [Mengapa Tertarik membahas unit test ?](#Alasan-Membehas-Unit-Test)
+2. [Kenapa dan ada apa dengan unit test ?](#Kenapa-dan-ada-apa-dengan-unit-test)
+3. [Kenapa developer yang melakukannya ?](#Kenapa-developer-yang-melakukannya-)
+4. [Seberapakah pentingnya ? ](#Seberapa-pentingnya)
+5. [Bagaimana implementasinya ?](#Bagaimana-implementasinya)
+6. [Kekurangan](#Kekurangan)
+7. [Summary](#Summary)
 
+
+## Alasan Membehas Unit Test
+Alasan yang kuat mengapa tertarik membahas mengenai unit test berawal dari pengalaman pribadi yang bisa dibilang merupakan [Culture Shock](https://en.wikipedia.org/wiki/Culture_shock) bagi saya secara pribadi. Hal tersebut dikarenakan harus menulis unit test dengan syarat tingkat line coverage yang cukup tinggi untuk seorang yang baru mengenal Unit Test. Selain itu, Unit Test sendiri sangat penting untuk menjaga sebuah kualitas code ketika membuat sebuah aplikasi dan bahkan beberapa perusahaan menjadikannya syarat ketika proses development.
+
+Jadi hal tersebutlah yang mendorong menulis artikel ini. Penulis berharap agar pembaca dapat mengerti point apa dan bagaimana unit test tersebut dilakukan, sebarapa penting unit test ini untuk diimplementasikan.
 
 ## Kenapa dan ada apa dengan unit test
 Mungkin beberapa developer bertanya-tanya kenapa harus **Unit Test** atau bahkan tidak tau tentang **Unit Test** itu sendiri. Mari kita bahas apa itu **Unit Test** dan apa issue yang berkaitan dengan Unit Test.
 
 Seperti yang sudah dijelaskan [diatas](#UNIT-TEST), **Unit Test** merupakan salah satu cara yang digunakan untuk melakukan test terhadap code yang telah kita buat, apakah sudah memenuhi ekspektasi dengan apa yang kita inginkan.
 
-Apakah Harus Dengan **Unit Test** ? tentu saja tidak, banyak beberapa cara untuk melakukan hal tersebut, kita bisa menggunakan [Integration Test](https://en.wikipedia.org/wiki/Integration_testing) untuk scope yang lebih besar atau **"Test Test"** yang lain. Bahkan developer biasa melakukan test dengan meng-run aplikasi dan mencobanya secara manual.
+Apakah Harus Dengan **Unit Test** ? tentu saja tidak, banyak beberapa cara untuk melakukan hal tersebut, kita bisa menggunakan [Integration Test](https://en.wikipedia.org/wiki/Integration_testing) untuk scope yang lebih luas atau **"Test Test"** yang lain. Bahkan mungkin masih terdapat beberapa developer yang melakukan test dengan meng-run aplikasi dan mencobanya secara manual.
 
-Apakah itu salah ? menurut saya, TIDAK, kenapa ? karena pada dasarnya itu merupakan salah satu cara yang dilakukan beberapa developer untuk melakukan test untuk memastikan source code yang telah ditulis sesuai dengan ekspektasi. Yap, kenapa saya mengatakan itu tidak salah, karena cara tersebut adalah cara yang saya gunakan 3 tahun lalu.
+Apakah itu salah ? menurut saya, TIDAK, kenapa ? karena pada dasarnya itu merupakan salah satu cara yang dilakukan beberapa developer untuk melakukan test untuk memastikan source code yang telah ditulis sesuai dengan ekspektasi. Yap, kenapa saya mengatakan itu tidak salah, karena cara tersebut adalah cara yang saya gunakan sebelum mengetahui Unit Test.
 
 Kendala yang umum kenapa orang tidak mengimplementasikan **Unit Test** ini selain tidak mengetahui **Unit Test** itu sendiri tidak lain adalah **WAKTU**. Kenapa ? ketika membuat **Unit Test**, tentu saja akan memakan waktu dari developer. Developer harus menulis test terhadap source code yang telah kita buat, bahkan seringkali kita harus mempersiapkan test dengan banyak case untuk 1 komponen yang memang itu memiliki logika yang rumit. So, kenapa developer harus  menghabiskan waktu untuk menulis code dan harus membuat **Unit Test** yang memakan waktu juga ? bukankah itu akan menghambat **"timeline"** dari proses development ?
 
@@ -31,9 +37,9 @@ Lalu apa yang saya akan dapatkan setelah mengimplementasikan **Unit Test** ? [le
 ## Kenapa developer yang melakukannya
 Mungkin ini yang salah satu jadi pertanyaan, mengapa Developer yang melakukannya ?  Haruskah developer yang melakukannya ? kenapa bukan QA (Quality Assurance) ?
 
-Menurut pendapat saya pribadi, **YES**. As Developer, kita harus memastikan semua produk yang telah dideliver ke customer harus sudah sesuai dengan requirement yang telah ditetapkan termasuk terdapat case case yang memang harus dihandle. 
+Menurut pendapat saya pribadi, **YES**. As Developer, kita harus memastikan semua produk yang telah dideliver ke customer harus sudah sesuai dengan requirement yang telah ditetapkan termasuk terdapat case case yang memang harus dihandle.
 
-Kenapa bukan QA (Quality Assurance) yang melakukan test-test tersebut ? Well, sebenarnya menurut saya pribadi, QA memiliki scope pengetesan yang lebih luas dari developer. So, jika QA harus melakukan test yang seharusnya itu harus harus sesuai dengan requirement, kapan QA akan melakukan test terhadap **"unexpected case"** ??? *hehe :) 
+Kenapa bukan QA (Quality Assurance) yang melakukan test-test tersebut ? Well, sebenarnya menurut saya pribadi, QA memiliki scope pengetesan yang lebih luas dari developer. So, jika QA harus melakukan test yang seharusnya itu harus harus sesuai dengan requirement, kapan QA akan melakukan test terhadap **"unexpected case"** ???
 
 ## Seberapa pentingnya
 Seberapa pentingkah **Unit Test** ? Lalu apa yang saya akan dapatkan setelah mengimplementasikan **Unit Test** setelah mengorbankan waktu untuk melakukannya ?
@@ -51,13 +57,13 @@ dari ilustrasi di atas, flow approval developer akan melakukan test secara manua
 
 Lalu apa yang kita lakukan di Unit Test ?
 ```                          yes
-write/fix unit test/codes --------> run test----|---> success 
-        ^                                       |
-        |                                       | as expected ?
-evaluate the code / unit test-------------------|
+write/fix unit test and codes --------> run test----|---> success 
+        ^                                           |
+        |                                           | as expected ?
+evaluate the code / unit test-----------------------|
                                 no
 ```
-Ilustrasi diatas yang akan di lakukan dengan **Unit Test**, developer melakukan proses tersebut untuk approval flow dan generate report. Dan keuntungannya adalah developer dapat melakukan verify yang telah dibuat, fix bug dan melakukan verify ulang dan  membuat banyak test case untuk masing-masing proses tersebut tanpa harus mengulang proses dari awal. Seperti contohnya, untuk test case yang bisa kita test untuk proses approval :
+Ilustrasi diatas yang akan di lakukan dengan **Unit Test**, developer melakukan proses tersebut untuk approval flow dan generate report. Dan keuntungannya adalah developer dapat melakukan verify yang telah dibuat, fix bug dan melakukan verify ulang dan  membuat banyak test case untuk masing-masing proses tersebut tanpa harus mengulang proses dari awal dan dilakukan secara automate berdasarkan Unit Test yang telah ditulis. Seperti contohnya, untuk test case yang bisa kita test untuk proses approval :
 - user selain role yang berhak, tidak dapat melakukan approval
 - user tidak dapat melakukan generate report jika approvalnya tidak terpenuhi
 - user yang melakukan approval harus ada dan valid
@@ -67,8 +73,6 @@ dan masih banyak lagi test case yang developer bisa masukkan tanpa harus melakuk
 Ada beberapa keuntungan lain selain diatas, seperti ketika developer menemukan bug di flow tertentu, developer cukup menambahkan test sesuai dengan case yang menyebabkan bug, dan run unit test, untuk melakukan verify tanpa harus melakukannya dari awal. Dengan begitu developer dapat memastikan bug yang telah terjadi sudah dihandle dan tidak mengganggu flow dari logika yang sebelumnya sudah valid.
 
 Selain beberapa keuntungan yang telah disampaikan diatas, beberapa startup besar juga sudah menerapkan dan mewajibkan unit test sebagai salah satu cara untuk melakukan verify terhadap apa yang kita buat. 
-
-### ***So, what are you waiting for ?***
 
 
 ## Bagaimana implementasinya ?
@@ -100,7 +104,6 @@ diatas sudah terdapat class Utitlity yang memiliki 2 method.
 2. digunakan untuk melakukan penjumlahan terhadap beberapa amount
 
 So mari kita buat unit testnya : 
-
 yang pertama mari kita buat untuk unit test untuk ke 2 method tersebut :
 ```
 public class UtilityTest {
@@ -124,13 +127,13 @@ public class UtilityTest {
     }
 
     @Test
-    public void sumAmmount_NullAmountTest(){
+    public void sumAmmount_nullAmountTest(){
         Long actualResult = Utility.sumAmounts(10l, null, 1l);
         assertEquals(Long.valueOf(11l), actualResult);
     }
 
     @Test
-    public void sumAmmount_AllNullAmountTest(){
+    public void sumAmmount_allNullAmountTest(){
         Long actualResult = Utility.sumAmounts(null, null, null);
         assertEquals(Long.valueOf(0l), actualResult);
     }
@@ -169,19 +172,19 @@ public class UtilityTest {
     }
 
     @Test
-    public void sumAmmount_NullAmountTest(){
+    public void sumAmmount_nullAmountTest(){
         Long actualResult = Utility.sumAmounts(10l, null, 1l);
         assertEquals(Long.valueOf(11l), actualResult);
     }
 
     @Test
-    public void sumAmmount_AllNullAmountTest(){
+    public void sumAmmount_allNullAmountTest(){
         Long actualResult = Utility.sumAmounts(null, null, null);
         assertEquals(Long.valueOf(0l), actualResult);
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void denullifyAmount_NegativeAmount(){
+    public void denullifyAmount_negativeAmount(){
         Utility.denullifyAmount(-1l);
     }
 
@@ -191,19 +194,17 @@ public class UtilityTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void sumAmmount_NullAndNegativeTest(){
+    public void sumAmmount_nullAndNegativeTest(){
         Utility.sumAmounts(null, null, -1l);
     }
 }
 ```
-Jika diperhatikan, tidak ada perubahan pada test sebelumnya. Hanya ada penambahan test untuk case terbaru yaitu ```denullifyAmount_NegativeAmount()```, ```sumAmmount_negativeAmountTest()``` dan ```sumAmmount_NullAndNegativeTest()```. Ketika kita run tersebut dan terdapat error di test sebelumnya, maka perlu ada pengecekan karena terdapat indikasi bahwa perubahan code yang baru tersebut mempengaruhui flow yang sebelumnya.
+Jika diperhatikan, tidak ada perubahan pada test sebelumnya. Hanya ada penambahan test untuk case terbaru yaitu ```denullifyAmount_negativeAmount()```, ```sumAmmount_negativeAmountTest()``` dan ```sumAmmount_nullAndNegativeTest()```. Ketika kita run tersebut dan terdapat error di test sebelumnya, maka perlu ada pengecekan karena terdapat indikasi bahwa perubahan code yang baru tersebut mempengaruhui flow yang sebelumnya.
 
 ## Kekurangan
 Sebelumnya sudah dijelaskan, apa itu ``Unit Test`` dan pengertiannya. Unit test sendiri adalah salah satu metode yang digunakan melakukan pengetesan di level ``Unit``. Jadi kita tidak perlu memikirkan bagaimana si ``Unit`` ini dipanggil oleh ``Unit`` lain. Sehingga kita tidak dapat memastikan proses integrasi antara class sudah berjalan dengan benar atau tidak. Seperti contohnya case yang sering terjadi adalah parameter yang dikirim  dari ``Unit`` yang akan di test ternyata salah dari sisi ``Unit`` pemanggil. Karena hal tersebut ada beberapa metode lain seperti ``Integration Test`` yang dapat dikombinasikan untuk bisa mengcover hal tersebut.
 
+Selain kasus diatas, hal yang mungkin menjadi perhatian adalah waktu dalam proses yang menjadi semakin panjang karena harus membuat Unit Test untuk code yang telah dibuat. 
+
 ## Summary
-**Unit Test** merupakan salah satu metode yang digunakan untuk melakukan test pada source code yang telah dibuat. **Unit Test** sendiri banyak memberikan keuntungan dalam pengimplementasiannya seperti dapat mengurangi effort untuk melakukan test terhadap source code yang akan dibuat.
-
-
-# What's NEXT  ? 
-Untuk selanjutkan akan dibahas mengenai implementasi pada real project SpringBoot dan bagaimana menggunakan Mocking Framework untuk melakukan mock dependencies. 
+**Unit Test** merupakan salah satu metode yang digunakan untuk melakukan test pada source code yang telah dibuat. **Unit Test** sendiri banyak memberikan keuntungan dalam pengimplementasiannya seperti dapat mengurangi effort untuk melakukan test terhadap source code yang akan dibuat. Banyak tools-tools yang memudahkan untuk menulis Unit Test seperti [JUnit](https://junit.org/) JUnit untuk java, [PhpUnit](https://phpunit.de/) untuk PHP, dan banyak lagi.
